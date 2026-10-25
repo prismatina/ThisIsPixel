@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thisispixel"
+version = "2.1.0"
+description = "A focused pixel art and sprite animation editor built with PyQt6"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PyQt6>=6.6.0"]
+
+[project.optional-dependencies]
+dev = ["pyinstaller>=6.0"]
+
+[project.gui-scripts]
+thisispixel = "main:main"
+
+[tool.setuptools]
+py-modules = [
+    "main",
+    "models",
+    "commands",
+    "tools",
+    "canvas",
+    "layers",
+    "timeline",
+    "palette",
+    "dialogs",
+    "styles",
+    "app_settings",
+    "version",
+]
